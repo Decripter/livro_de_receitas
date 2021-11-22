@@ -37,7 +37,10 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
-    'receitas.apps.ReceitasConfig'
+    #apps
+    'receitas.apps.ReceitasConfig',
+    #libs
+    'rest_framework',
 ]
 
 MIDDLEWARE = [

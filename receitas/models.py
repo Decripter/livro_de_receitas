@@ -16,4 +16,4 @@ class Receita(models.Model):
     receita = models.TextField('Receita')
 
     def __str__(self):
-        return self.choice_text
+        return "Chef: " + str(self.chef) +" - "+ str(self.receita[0:10])+" ..." 

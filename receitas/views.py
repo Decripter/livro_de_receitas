@@ -1,3 +1,9 @@
-from django.shortcuts import render
+from receitas.models import Receita
+from receitas.serializers import ReceitaSerializer
+from rest_framework import viewsets
 
-# Create your views here.
+
+
+class ReceitasViewSet(viewsets.ModelViewSet):
+    queryset = Receita.objects.all()
+    serializer_class = ReceitaSerializer
