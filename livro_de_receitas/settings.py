@@ -44,6 +44,7 @@ INSTALLED_APPS = [
     #libs
     'rest_framework',
     'django_filters',
+    'django_extensions',
 
 ]
 
@@ -77,7 +78,8 @@ TEMPLATES = [
 
 WSGI_APPLICATION = 'livro_de_receitas.wsgi.application'
 REST_FRAMEWORK = {
-    'DEFAULT_FILTER_BACKENDS': ['django_filters.rest_framework.DjangoFilterBackend']
+    'DEFAULT_FILTER_BACKENDS': ['django_filters.rest_framework.DjangoFilterBackend'],
+    'TEST_REQUEST_DEFAULT_FORMAT':'json',
 }
 
 # Database
