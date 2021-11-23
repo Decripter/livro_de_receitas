@@ -1,6 +1,7 @@
 from django.contrib import admin
-from .models import Chef, Receita
+from .models import ChefModel, ReceitaModel
 
 
-admin.site.register(Chef)
-admin.site.register(Receita)
+admin.site.register(ChefModel)
+admin.site.register(ReceitaModel)
+
