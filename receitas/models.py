@@ -1,9 +1,6 @@
 from django.db import models
 
-
-
-
-class Chef(models.Model):
+class ChefModel(models.Model):
     nome_chef = models.CharField('Nome', max_length=200, unique=True)
 
     def __str__(self):
@@ -11,9 +8,10 @@ class Chef(models.Model):
 
 
 
-class Receita(models.Model):
-    chef = models.ForeignKey(Chef, on_delete=models.CASCADE)
+class ReceitaModel(models.Model):
+    chef = models.ForeignKey(ChefModel, on_delete=models.CASCADE)
     receita = models.TextField('Receita')
 
     def __str__(self):
         return "Chef: " + str(self.chef) +" - "+ str(self.receita[0:10])+" ..." 
+        

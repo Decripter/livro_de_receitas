@@ -1,7 +1,7 @@
-from receitas.models import Receita
+from receitas.models import ReceitaModel
 from rest_framework import serializers
 
 class ReceitaSerializer(serializers.ModelSerializer):
     class Meta:
-        model = Receita
+        model = ReceitaModel
         fields = ['id', 'chef', 'receita']

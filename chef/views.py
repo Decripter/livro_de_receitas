@@ -1,4 +1,4 @@
-from receitas.models import Receita
+from receitas.models import ReceitaModel
 from django.shortcuts import redirect
 from django.urls import reverse
 
@@ -7,7 +7,7 @@ from rest_framework import viewsets, permissions
 
 class ReceitasViewSet(viewsets.ModelViewSet):
 
-    queryset = Receita.objects.all()
+    queryset = ReceitaModel.objects.all()
     serializer_class = ReceitaSerializer
 
 
